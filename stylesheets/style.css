@@ -513,7 +513,7 @@ body {
   background-position: 50% calc(50% / 3 + 4rem);
 }
 
-#start-here div.static-logo-teal-light {
+#start-here div.static-logo-gray {
   display: none;
 }
 
@@ -561,14 +561,14 @@ body {
 }
 
 #start-here .bg-pink,
-#start-here .bg-teal {
+#start-here .bg-green {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
 #start-here .bg-pink h2,
-#start-here .bg-teal h2 {
+#start-here .bg-green h2 {
   font-size: 2rem;
   font-weight: 800;
   color: var(--dark-gray);

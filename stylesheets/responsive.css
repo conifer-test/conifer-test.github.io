@@ -154,8 +154,8 @@
     background-position: calc(50% / 3) calc(50% + 2rem);
   }
 
-  #start-here div.static-logo-teal-light {
-    background-image: url("../images/logo/conifer-logo-teal-light.png");
+  #start-here div.static-logo-gray {
+    background-image: url("../images/logo/conifer-logo-gray.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 25%;
