@@ -62,6 +62,10 @@ body {
   background-color: var(--conifer-light-gray);
 }
 
+.bg-white {
+  background-color: var(--white);
+}
+
 .text-green {
   color: var(--conifer-green);
 }
@@ -250,6 +254,7 @@ body {
   justify-content: center;
   height: 1.25rem;
   width: 1.25rem;
+  min-width: 1.25rem;
 }
 
 #toc .bullet div {
@@ -272,7 +277,7 @@ body {
 }
 
 #toc .selected .bullet div {
-  background-color: var(--conifer-teal);
+  background-color: var(--conifer-green);
 }
 
 #toc .subitem {
@@ -534,7 +539,7 @@ body {
 }
 
 #start-here > div div:last-child > img {
-  width: 100%;
+  width: 75%;
 }
 
 #start-here > div div:last-child > img.conifer {
