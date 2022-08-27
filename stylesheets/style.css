@@ -299,20 +299,42 @@ body {
 
 #case-study-content img {
   max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#case-study-content video {
-  max-width: 100%;
+#case-study-content ol > li::before {
+  color: var(--white);
 }
 
 #case-study-content > div {
   padding: 4rem 1rem;
 }
 
+#case-study-content table thead {
+  color: var(--white);
+  text-align: center;
+}
+
+#case-study-content table .command {
+  width: 22%;
+  text-align: center;
+}
+
+#case-study-content table th,
+#case-study-content table td {
+  padding: 6px 13px;
+  border: 1px solid rgb(107, 114, 128);
+  vertical-align: middle;
+}
+
+
 #case-study-content .prose h1::before,
 #case-study-content .prose h2::before,
 #case-study-content .prose h3::before,
-#case-study-content .prose h4::before {
+#case-study-content .prose h4::before,
+#case-study-content .prose h5::before {
   display: block;
   content: " ";
   margin-top: -6rem;
@@ -334,32 +356,32 @@ body {
   margin-top: 3rem;
 }
 
+.prose h5 {
+  color: var(--conifer-green);
+}
+
 .prose a {
-  color: #4c74b9;
+  color: var(--conifer-green);
   text-decoration: underline !important;
-  text-decoration-color: #d2dcee !important;
+  text-decoration-color: #ffffff !important;
   transition: all 0.3s ease;
 }
 
 .prose a:hover {
-  text-decoration-color: #829dce !important;
+  text-decoration-color: #5dd1aa !important;
 }
 
 .prose blockquote {
-  border-left: 0.25rem solid var(--gray-200);
+  border-left: 0.25rem solid var(--white);
 }
 
 .prose em {
   font-style: italic;
 }
 
-/* #case-study img {
-  width: 700px;
-} */
-
 .prose code {
-  background-color: var(--gray-300);
-  color: var(--gray-600);
+  background-color: var(--gray-600);
+  color: var(--white);
   font-family: monospace;
   font-weight: normal;
   font-size: 0.75rem;
