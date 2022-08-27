@@ -14,7 +14,6 @@
   /* 1e2128 */
   --conifer-light-gray: #5f5f5f;
   --conifer-green-light: rgba(1, 255, 171, 0.2);
-  --conifer-pink: #ff895d;
 
   --white: #ffffff;
   --dark-gray: #23262dff;
@@ -52,7 +51,7 @@ body {
 }
 
 .bg-green {
-  background-color: var(--conifer-green-light);
+  background-color: var(--conifer-green);
 }
 
 .bg-gray {
@@ -73,6 +72,10 @@ body {
 
 .text-white {
   color: var(--white);
+}
+
+.text-gray {
+  color: var(--conifer-gray);
 }
 
 .block {
@@ -168,7 +171,7 @@ body {
 
 #mobile-menu > a {
   border-left: 4px solid transparent;
-  color: var(--gray-600);
+  color: var(--white);
   display: block;
   font-size: 1rem;
   font-weight: 500;
@@ -178,15 +181,14 @@ body {
 }
 
 #mobile-menu > a:hover {
-  background-color: var(--gray-50);
-  border-left-color: var(--gray-300);
-  color: var(--gray-800);
+  border-left-color: var(--gray-400);
+  color: var(--gray-400);
 }
 
 #mobile-menu > a.selected {
-  background-color: var(--conifer-green-light);
-  border-left-color: var(--conifer-teal);
-  color: var(--gray-900);
+  /* background-color: var(--conifer-green); */
+  border-left-color: var(--white);
+  color: var(--conifer-green);
 }
 
 .mobile-menu-open #mobile-menu {
@@ -301,6 +303,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 1rem;
 }
 
 #case-study-content ol > li::before {
@@ -544,11 +547,7 @@ body {
   background-position: 50% calc(50% / 3 + 4rem);
 }
 
-#start-here div.static-logo-gray {
-  display: none;
-}
-
-#start-here div.static-logo-pink-light {
+#start-here div.static-logo-white {
   display: none;
 }
 
@@ -591,14 +590,12 @@ body {
   font-weight: 500;
 }
 
-#start-here .bg-pink,
 #start-here .bg-green {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-#start-here .bg-pink h2,
 #start-here .bg-green h2 {
   font-size: 2rem;
   font-weight: 800;
@@ -611,10 +608,8 @@ body {
   color: var(--dark-gray);
 }
 
-#start-here video.pad {
-  background-color: var(--dark-gray);
+#start-here img {
   border-radius: 0.5rem;
-  padding: 2rem;
 }
 
 #start-here img.lg-screen {

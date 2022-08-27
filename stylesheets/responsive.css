@@ -154,17 +154,8 @@
     background-position: calc(50% / 3) calc(50% + 2rem);
   }
 
-  #start-here div.static-logo-gray {
-    background-image: url("../images/logo/conifer-logo-gray.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 25%;
-    background-position: calc(50% / 3) calc(50% + 2rem);
-    display: flex;
-  }
-
-  #start-here div.static-logo-pink-light {
-    background-image: url("../images/logo/conifer-logo-pink-light.png");
+  #start-here div.static-logo-white {
+    background-image: url("../images/logo/conifer-logo-white.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 25%;
