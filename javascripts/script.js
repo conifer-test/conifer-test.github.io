@@ -1,15 +1,15 @@
 // Elements
-const navLinks = document.querySelectorAll("#header nav a");
+const navLinks = document.querySelectorAll('#header nav a');
 const navLinksCount = navLinks.length;
-const header = document.querySelector("header");
-const mobileMenuButton = document.querySelector("header #menu button");
-const mobileMenu = document.querySelector("#mobile-menu");
-const caseStudy = document.getElementById("case-study");
-const caseStudyText = document.querySelector(".prose");
-const toc = document.getElementById("toc");
-const tocLinks = document.querySelectorAll("#toc a");
+const header = document.querySelector('header');
+const mobileMenuButton = document.querySelector('header #menu button');
+const mobileMenu = document.querySelector('#mobile-menu');
+const caseStudy = document.getElementById('case-study');
+const caseStudyText = document.querySelector('.prose');
+const toc = document.getElementById('toc');
+const tocLinks = document.querySelectorAll('#toc a');
 const tocLinksCount = tocLinks.length;
-const team = document.querySelector("#our-team ul li");
+const team = document.querySelector('#our-team ul li');
 
 // Handlers
 const handleScroll = () => {
@@ -34,28 +34,28 @@ const handlePageLoad = () => {
 
 const handleProseSize = () => {
   if (window.innerWidth >= 1280) {
-    caseStudyText.classList.remove("prose-lg");
-    caseStudyText.classList.add("prose-xl");
+    caseStudyText.classList.remove('prose-lg');
+    caseStudyText.classList.add('prose-xl');
   } else if (window.innerWidth >= 1024) {
-    caseStudyText.classList.remove("prose-xl");
-    caseStudyText.classList.add("prose-lg");
+    caseStudyText.classList.remove('prose-xl');
+    caseStudyText.classList.add('prose-lg');
   } else {
-    caseStudyText.classList.remove("prose-lg");
-    caseStudyText.classList.remove("prose-xl");
+    caseStudyText.classList.remove('prose-lg');
+    caseStudyText.classList.remove('prose-xl');
   }
 };
 
 const handleMainSectionSelection = () => {
   const clearSelectedNav = () => {
-    const selectedItems = document.querySelectorAll("header a.selected");
+    const selectedItems = document.querySelectorAll('header a.selected');
     selectedItems.forEach((selectedItem) => {
-      selectedItem.classList.remove("selected");
+      selectedItem.classList.remove('selected');
     });
   };
   const selectNavItem = (hash) => {
     const links = document.querySelectorAll(`a[href="${hash}"]`);
     links.forEach((link) => {
-      link.classList.add("selected");
+      link.classList.add('selected');
     });
   };
 
@@ -64,7 +64,7 @@ const handleMainSectionSelection = () => {
 
   if (teamInView) {
     clearSelectedNav();
-    selectNavItem("#our-team");
+    selectNavItem('#our-team');
     return;
   }
 
@@ -94,41 +94,41 @@ const handleTocVisibility = () => {
   };
 
   if (tocIsVisible()) {
-    toc.classList.add("show");
+    toc.classList.add('show');
   } else {
-    toc.classList.remove("show");
+    toc.classList.remove('show');
   }
 };
 
 const handleTocSelection = () => {
   const clearSelectedToc = () => {
-    const selectedTocItems = document.querySelectorAll("#toc .selected");
+    const selectedTocItems = document.querySelectorAll('#toc .selected');
     const subItems = document.querySelectorAll(`li.subitem.show`);
 
     subItems.forEach((subItem) => {
-      subItem.classList.remove("show");
+      subItem.classList.remove('show');
     });
 
     selectedTocItems.forEach((selectedTocItem) => {
-      selectedTocItem.classList.remove("selected");
+      selectedTocItem.classList.remove('selected');
     });
   };
 
   const selectTocItem = (link) => {
-    const tocItem = link.closest("li");
+    const tocItem = link.closest('li');
     const dataSection = tocItem.dataset.section;
     const subItems = document.querySelectorAll(
       `li.subitem[data-section="${dataSection}"]`
     );
 
     subItems.forEach((subItem) => {
-      subItem.classList.add("show");
+      subItem.classList.add('show');
     });
 
-    tocItem.classList.add("selected");
+    tocItem.classList.add('selected');
   };
 
-  if (!toc.classList.contains("show")) return;
+  if (!toc.classList.contains('show')) return;
 
   for (let i = tocLinksCount - 1; i >= 0; i--) {
     const link = tocLinks[i];
@@ -145,12 +145,12 @@ const handleTocSelection = () => {
 };
 
 const handlemobileMenuClick = () => {
-  const menuOpen = header.classList.contains("mobile-menu-open");
+  const menuOpen = header.classList.contains('mobile-menu-open');
 
   if (menuOpen) {
-    header.classList.remove("mobile-menu-open");
+    header.classList.remove('mobile-menu-open');
   } else {
-    header.classList.add("mobile-menu-open");
+    header.classList.add('mobile-menu-open');
   }
 };
 
@@ -170,24 +170,24 @@ const throttle = (callback, wait) => {
 };
 
 // Events
-document.addEventListener("DOMContentLoaded", handlePageLoad);
-document.addEventListener("scroll", throttle(handleScroll, 16));
-window.addEventListener("resize", throttle(handleResize, 16));
-mobileMenuButton.addEventListener("click", handlemobileMenuClick);
-mobileMenu.addEventListener("click", handlemobileMenuClick);
+document.addEventListener('DOMContentLoaded', handlePageLoad);
+document.addEventListener('scroll', throttle(handleScroll, 16));
+window.addEventListener('resize', throttle(handleResize, 16));
+mobileMenuButton.addEventListener('click', handlemobileMenuClick);
+mobileMenu.addEventListener('click', handlemobileMenuClick);
 
 // Lazy image load
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
   var lazyloadImages;
 
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
+  if ('IntersectionObserver' in window) {
+    lazyloadImages = document.querySelectorAll('.lazy');
     var imageObserver = new IntersectionObserver(function (entries, observer) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           var image = entry.target;
           image.src = image.dataset.src;
-          image.classList.remove("lazy");
+          image.classList.remove('lazy');
           imageObserver.unobserve(image);
         }
       });
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   } else {
     var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll("img");
+    lazyloadImages = document.querySelectorAll('img');
 
     function lazyload() {
       if (lazyloadThrottleTimeout) {
@@ -210,19 +210,19 @@ document.addEventListener("DOMContentLoaded", function () {
         lazyloadImages.forEach(function (img) {
           if (img.offsetTop < window.innerHeight + scrollTop) {
             img.src = img.dataset.src;
-            img.classList.remove("lazy");
+            img.classList.remove('lazy');
           }
         });
         if (lazyloadImages.length == 0) {
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
+          document.removeEventListener('scroll', lazyload);
+          window.removeEventListener('resize', lazyload);
+          window.removeEventListener('orientationChange', lazyload);
         }
       }, 20);
     }
 
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
+    document.addEventListener('scroll', lazyload);
+    window.addEventListener('resize', lazyload);
+    window.addEventListener('orientationChange', lazyload);
   }
 });

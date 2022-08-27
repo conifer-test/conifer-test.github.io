@@ -628,6 +628,7 @@
           <img
             class="lazy"
             data-src="images/diagrams/potential_solutions_table.png"
+            alt="table of potential solutions"
           />
 
           <p>
@@ -637,23 +638,24 @@
           </p>
           <ul>
             <li>
-              Easy to set up - Conifer provides a simple CLI to build, deploy,
-              and tear down AWS infrastructure while providing a simple live
-              dashboard to view while their tests run in parallel.
+              <strong>Easy to set up</strong> - Conifer provides a simple CLI to
+              build, deploy, and tear down AWS infrastructure while providing a
+              simple live dashboard to view while their tests run in parallel.
             </li>
             <li>
-              Control of infrastructure - A company like Drone-On will be able
-              to maintain full control of the infrastructure deployed to AWS and
-              scale up or down as they see fit.
+              <strong>Control of infrastructure</strong> - A company like
+              Drone-On will be able to maintain full control of the
+              infrastructure deployed to AWS and scale up or down as they see
+              fit.
             </li>
             <li>
-              Pay as you go - With Conifer, Drone-On will have to pay for the
-              resources they deploy to AWS, but there are no upfront payments.
-              While this cost can increase depending on usage, it is possible to
-              increase or decrease capacity depending on the user's testing
-              demands. No upfront cost and the ability to control the cost based
-              on usage make Conifer a cost-effective alternative for a company
-              like Drone-On.
+              <strong>Pay as you go</strong> - With Conifer, Drone-On will have
+              to pay for the resources they deploy to AWS, but there are no
+              upfront payments. While this cost can increase depending on usage,
+              it is possible to increase or decrease capacity depending on the
+              user's testing demands. No upfront cost and the ability to control
+              the cost based on usage make Conifer a cost-effective alternative
+              for a company like Drone-On.
             </li>
           </ul>
           <p>
@@ -724,6 +726,7 @@
             class="lazy"
             data-src="images/diagrams/conifer_init.png"
             height="500px"
+            alt="initialize command"
           />
 
           <p>
@@ -747,6 +750,7 @@
             class="lazy"
             data-src="images/diagrams/conifer_build.png"
             height="500px"
+            alt="build command"
           />
           <p>
             Any changes made to the user's project will require a rebuild and
@@ -756,7 +760,11 @@
           </p>
 
           <h3 id="section-3-3">3.3 conifer deploy</h3>
-          <img class="lazy" data-src="images/diagrams/conifer_deploy3x.gif" />
+          <img
+            class="lazy"
+            data-src="images/diagrams/conifer_deploy3x.gif"
+            alt="deploy command"
+          />
           <p>
             The <code>conifer deploy</code> command will deploy the necessary
             resources to AWS. This command utilizes AWS Cloud Development Kit
@@ -765,7 +773,11 @@
           </p>
 
           <h3 id="section-3-4">3.4 conifer run</h3>
-          <img class="lazy" data-src="images/diagrams/conifer_run.gif" />
+          <img
+            class="lazy"
+            data-src="images/diagrams/conifer_run.gif"
+            alt="run command"
+          />
           <p>
             Once the Conifer's infrastructure has been deployed, the user can
             initiate <code>conifer run</code> to begin running the Cypress tests
@@ -776,7 +788,11 @@
           </p>
 
           <h3 id="section-3-5">3.5 conifer teardown</h3>
-          <img class="lazy" data-src="images/diagrams/conifer_td4x.gif" />
+          <img
+            class="lazy"
+            data-src="images/diagrams/conifer_td4x.gif"
+            alt="teardown command"
+          />
           <p>
             The user can remove the Conifer infrastructure that was deployed to
             AWS using <code>conifer teardown</code>. This removes all AWS
@@ -854,6 +870,7 @@
           <img
             class="lazy"
             data-src="images/diagrams/split_by_file_count.gif"
+            alt="animation of split by file count"
           />
           <p>
             The first stage is utilized in the initial test run. During the
@@ -883,6 +900,7 @@
           <img
             class="lazy"
             data-src="images/diagrams/split_by_file_count.png"
+            alt="split by file count"
           />
 
           <h3 id="section-5-2">5.2 Stage 2: Allocate by Timing Data</h3>
@@ -905,6 +923,7 @@
           <img
             class="lazy"
             data-src="images/diagrams/split_by_timing_data.png"
+            alt="split by timing data"
           />
           <p>
             As we can see from the image above, this will result in nodes that
@@ -1432,6 +1451,7 @@
           <img
             class="lazy"
             data-src="images/diagrams/conifer_full_architecture.png"
+            alt="Conifer's full architecture"
           />
           <p>The above image illustrates Conifer's final architecture.</p>
           <ol>
@@ -1475,6 +1495,7 @@
           <img
             class="lazy"
             data-src="images/diagrams/lambda_initial_design.png"
+            alt="lambda architecture"
           />
           <p>
             Lambda has many characteristics that make it uniquely suitable for
@@ -1541,7 +1562,11 @@
             to 2018.
           </p>
 
-          <img class="lazy" data-src="images/diagrams/lambda-error.png" />
+          <img
+            class="lazy"
+            data-src="images/diagrams/lambda-error.png"
+            alt="lambda error"
+          />
 
           <p>
             We also explored a handful of workarounds that attempted to bypass
@@ -1631,7 +1656,11 @@
             need them in a single location.
           </p>
 
-          <img class="lazy" data-src="images/diagrams/current-situation.png" />
+          <img
+            class="lazy"
+            data-src="images/diagrams/current-situation.png"
+            alt="current situation"
+          />
 
           <p>
             The above image illustrates the current situation after our test
@@ -1752,7 +1781,11 @@
           </p>
 
           <h3 id="section-8-1">8.1 Dynamic Allocation of Tests</h3>
-          <img class="lazy" data-src="images/diagrams/example-image.png" />
+          <img
+            class="lazy"
+            data-src="images/diagrams/dynamic_allocation.gif"
+            alt="dynamic allocation"
+          />
 
           <p>
             In the future, our team would like to investigate other test
