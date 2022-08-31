@@ -40,6 +40,11 @@ body {
   height: 100%;
 }
 
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
 *,
 *:before,
 *:after {
@@ -301,7 +306,6 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 1rem;
 }
 
 #case-study-content ol > li::before {

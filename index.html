@@ -521,6 +521,11 @@
             made and challenges we faced.
           </p>
           <h3 id="section-1-2">1.2 What is Testing?</h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/what_is_testing.png"
+            alt="what is testing"
+          />
           <p>
             In software development, testing is the process of evaluating
             whether an application is functioning as intended and ensuring that
@@ -661,6 +666,11 @@
             programmatically. As a result, as an application grows in size and
             complexity, E2E testing can take an increasingly long time.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/problem_too_long.png"
+            alt="testing too long"
+          />
           <p>
             Long test-suite execution times can pose a serious problem for
             developer productivity and morale. A developer's productivity is
@@ -715,6 +725,12 @@
             illustrate Conifer's use case.
           </p>
           <h3 id="section-2-1">2.1 Hypothetical Use Case</h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/drone_on.png"
+            alt="drone on"
+            height="500"
+          />
           <p>
             Drone-On is an autonomous delivery platform on the long and winding
             path to success in Silicon Valley. Drone-On's innovative product and
@@ -788,7 +804,7 @@
           </p>
           <img
             class="lazy"
-            data-src="images/diagrams/sequential_tests.png"
+            data-src="images/diagrams/sequential_execution.png"
             alt="sequential tests"
           />
           <p>
@@ -837,7 +853,7 @@
           </p>
           <img
             class="lazy"
-            data-src="images/diagrams/parallel_tests.png"
+            data-src="images/diagrams/parallel_execution.png"
             alt="parallel tests"
           />
           <p>
@@ -888,7 +904,7 @@
           </p>
           <img
             class="lazy"
-            data-src="images/diagrams/comparison_table.png"
+            data-src="images/diagrams/existing_solutions.png"
             alt="comparison table"
           />
           <h3 id="section-4-1">4.1 Software as a Service (SaaS)</h3>
@@ -968,7 +984,7 @@
           <h2 id="section-5">5. Introducing Conifer</h2>
           <img
             class="lazy"
-            data-src="images/diagrams/conifer_solution_table.png"
+            data-src="images/diagrams/introducing_conifer.png"
             alt="conifer solution table"
           />
 
@@ -1032,7 +1048,7 @@
           <h2 id="section-6">6. Benchmarking Conifer</h2>
           <img
             class="lazy"
-            data-src="images/diagrams/benchmark_table1.png"
+            data-src="images/diagrams/table_1.png"
             alt="benchmark table 1"
           />
           <p>
@@ -1051,9 +1067,14 @@
               runs.
             </li>
           </ol>
+          <p>
+            <sup>[1]</sup>Keep in mind there could be variations in local test
+            run durations depending on local machine specs; for reference, the
+            device used here was a 2021 MacBook Pro (M1 Max, 32 GB RAM).
+          </p>
           <img
             class="lazy"
-            data-src="images/diagrams/benchmark_table2.png"
+            data-src="images/diagrams/table_2.png"
             alt="benchmark table 2"
           />
           <p>
@@ -1147,7 +1168,7 @@
 
           <img
             class="lazy"
-            data-src="images/diagrams/timing_data.png"
+            data-src="images/diagrams/split_by_timing_data.png"
             alt="split by timing data"
           />
 
@@ -1238,6 +1259,12 @@
             containers, each representing a single node running a different
             subset of the user's test suite.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/conifer_build.png"
+            alt="build image"
+            height="500"
+          />
           <p>
             A Docker container is an instantiation of a Docker image, which
             bundles the application code with all the dependencies required to
@@ -1263,6 +1290,11 @@
             on cloud infrastructure, we must provision this infrastructure
             before it can be used.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/provision_infrastructure.png"
+            alt="build image"
+          />
           <p>
             Provisioning the necessary infrastructure is accomplished through
             <a
@@ -1518,6 +1550,12 @@
               were specified for the node.
             </li>
           </ol>
+          <img
+            class="lazy"
+            data-src="images/diagrams/single_task.png"
+            alt="single task"
+            height="150"
+          />
           <p>
             Running this script will execute a subset of the complete test suite
             on a single node. This script is executed in each node, which
@@ -1539,6 +1577,13 @@
             execution infrastructure to enable us to access the results of tests
             run nodes that may no longer be active.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/persist_test_result.png"
+            alt="persist test results"
+            height="300"
+          />
+
           <p>
             The process of persisting the test results can be broken down into
             two main steps:
@@ -1605,6 +1650,11 @@
             </li>
           </ol>
           <h4 id="section-8-8-2">Implementation</h4>
+          <img
+            class="lazy"
+            data-src="images/diagrams/test_result_reports.png"
+            alt="test result reports"
+          />
           <p>
             Our goal was to give the user a high-level view of the results of
             the test-run in real-time, as well as a detailed report following
@@ -1620,6 +1670,7 @@
               HTML report - A detailed report after the test run is complete.
             </li>
           </ol>
+
           <h5 id="section-8-8-2-1">Live Dashboard</h5>
           <p>
             Real-time communication of test results is handled by the live
@@ -1633,6 +1684,12 @@
             the dashboard application. Upon receipt, the updates are
             communicated to the user via the React application.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/live_dashboard.gif"
+            alt="live dashboard"
+            height="500"
+          />
           <p>
             The live dashboard enables real-time monitoring of the progression
             of a test run, allowing the user to track the status of each
@@ -1650,6 +1707,12 @@
             information the user would have had access to had they run the
             test-suite locally.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/save_results_locally.png"
+            alt="html report"
+            height="250"
+          />
           <p>
             The report generation process is initiated when the CLI detects that
             all test execution nodes have powered down. This indicates that the
@@ -1803,7 +1866,7 @@
 
           <img
             class="lazy"
-            data-src="images/diagrams/lambda-error.png"
+            data-src="images/diagrams/driver_error.png"
             alt="lambda error"
           />
 
@@ -1870,6 +1933,12 @@
             What's the point of testing if you cannot see the results? So, we
             considered other ways of communicating test results to the users.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/real_time_error.png"
+            alt="lost functionality"
+            width="700"
+          />
           <p>
             One way is to create a test report where the user can see the
             results through an HTML file after the test run is complete. This
@@ -1883,6 +1952,11 @@
             file, meaning that the user has to go through hundreds of reports to
             see their test results.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/easy_aggregate_mochawesome.png"
+            alt="aggregated result"
+          />
           <p>
             We managed to solve this problem easily by using a custom reporter
             plugin called mochawesome-report-generator (marge) which can
@@ -1890,13 +1964,11 @@
             before we can aggregate the individual test results, we need them in
             a single location.
           </p>
-
           <img
             class="lazy"
-            data-src="images/diagrams/current-situation.png"
+            data-src="images/diagrams/node_test_results.png"
             alt="current situation"
           />
-
           <p>
             The above image illustrates the situation after our test suite has
             finished execution. The test results/artifacts were produced for
@@ -1906,6 +1978,11 @@
             send any results to the user, we need first to retrieve the test
             results from each node and place them in one centralized location.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/centralise_test_result.png"
+            alt="centralize test results"
+          />
           <p>
             The easiest approach would be to defer uploading the test artifacts
             until after all of the tests within a single node have finished
@@ -1914,6 +1991,11 @@
             artifacts have been generated. Running a script after this to upload
             the test artifacts would be a trivial process.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/post_execution_aggregate.png"
+            alt="post execution aggregate"
+          />
           <h4 id="section-9-2-1">Real-Time Results</h4>
           <p>
             But this is not good enough. We want Conifer to be able to
@@ -1971,6 +2053,12 @@
             would be separate from Cypress and run asynchronously in the
             background while the Cypress tests are executed.
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/file_watcher.png"
+            alt="file watcher"
+            height="400"
+          />
           <p>
             In order to function correctly, the file-watcher would need to
             detect when a test artifact has been created and fully written (as
