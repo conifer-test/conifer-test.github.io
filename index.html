@@ -1268,6 +1268,12 @@
           <h3 id="section-8-3">
             8.3 Blueprint for a Single Node: Docker Image
           </h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/blueprint.png"
+            alt="zoom infra"
+            width="400"
+          />
           <p>
             Docker images are files that function as a set of instructions that
             are used to run a Docker container. Conifer uses a Docker image to
@@ -1300,6 +1306,12 @@
           </p>
 
           <h3 id="section-8-4">8.4 Provisioning the Infrastructure</h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/zoom_infrastructure.png"
+            alt="zoom infra"
+            height="300"
+          />
           <p>
             Conifer relies on the power of cloud infrastructure to supply the
             physical computing infrastructure needed to run the parallel nodes
@@ -1430,6 +1442,12 @@
             CLI fulfills the above requirements.
           </p>
           <h5 id="section-8-5-1-2">Implementation</h5>
+          <img
+            class="lazy"
+            data-src="images/diagrams/initiate.gif"
+            alt="initiate"
+            height="250"
+          />
           <p>
             The CLI uses the
             <a href="https://aws.amazon.com/sdk-for-javascript/" target="_blank"
@@ -1550,6 +1568,12 @@
             </li>
           </ol>
           <h4 id="section-8-6-2">Implementation</h4>
+          <img
+            class="lazy"
+            data-src="images/diagrams/zoom_single_task.png"
+            alt="zoom single task"
+            width="350"
+          />
           <p>
             Conifer uses a simple shell script to control the flow of the test
             execution process within each node. This shell script is triggered
@@ -1577,12 +1601,6 @@
               were specified for the node.
             </li>
           </ol>
-          <img
-            class="lazy"
-            data-src="images/diagrams/single_task.png"
-            alt="single task"
-            height="150"
-          />
           <p>
             Running this script will execute a subset of the complete test suite
             on a single node. This script is executed in each node, which
@@ -1734,7 +1752,7 @@
             class="lazy"
             data-src="images/diagrams/live_dashboard.gif"
             alt="live dashboard"
-            height="500"
+            height="400"
           />
           <p>
             The live dashboard enables real-time monitoring of the progression
@@ -1757,7 +1775,7 @@
             class="lazy"
             data-src="images/diagrams/save_results_locally.png"
             alt="html report"
-            height="250"
+            height="200"
           />
           <p>
             The report generation process is initiated when the CLI detects that
