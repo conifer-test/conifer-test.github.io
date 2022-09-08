@@ -1209,13 +1209,18 @@
             At a high level, these responsibilities must be fulfilled to
             successfully parallelize an E2E test suite:
           </p>
+          <img
+            class="lazy"
+            data-src="images/diagrams/overall_responsibilities.png"
+            alt="overall responsibilities"
+          />
           <ol>
             <li>
               Preparing all of the tools and provisioning the necessary
               infrastructure to support parallel testing.
             </li>
             <li>Orchestrating/overseeing the testing process.</li>
-            <li>Executing the testing code on a single node.</li>
+            <li>Executing the testing code on each node.</li>
             <li>Storing results of each test in persistent storage.</li>
             <li>
               Communicating the results of the test suite to the end-user in a
@@ -1228,6 +1233,11 @@
             infrastructure.
           </p>
           <h3 id="section-8-2">8.2 Preparing Infrastructure Components</h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/setup_highlighted.png"
+            alt="setup highlighted"
+          />
           <p>
             Before we can actually perform a parallelized test run, we need to
             prepare all of the components that will be used to build the
@@ -1258,6 +1268,12 @@
           <h3 id="section-8-3">
             8.3 Blueprint for a Single Node: Docker Image
           </h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/blueprint.png"
+            alt="zoom infra"
+            width="400"
+          />
           <p>
             Docker images are files that function as a set of instructions that
             are used to run a Docker container. Conifer uses a Docker image to
@@ -1290,6 +1306,12 @@
           </p>
 
           <h3 id="section-8-4">8.4 Provisioning the Infrastructure</h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/zoom_infrastructure.png"
+            alt="zoom infra"
+            height="300"
+          />
           <p>
             Conifer relies on the power of cloud infrastructure to supply the
             physical computing infrastructure needed to run the parallel nodes
@@ -1342,6 +1364,11 @@
           </p>
 
           <h3 id="section-8-5">8.5 Managing the Test Orchestration Process</h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/orchestrate_highlighted.png"
+            alt="orchestrate highlighted"
+          />
           <p>
             The test orchestration process encompasses all of the actions that
             must be taken to execute a single test run. However, not all of
@@ -1415,6 +1442,12 @@
             CLI fulfills the above requirements.
           </p>
           <h5 id="section-8-5-1-2">Implementation</h5>
+          <img
+            class="lazy"
+            data-src="images/diagrams/initiate.gif"
+            alt="initiate"
+            height="250"
+          />
           <p>
             The CLI uses the
             <a href="https://aws.amazon.com/sdk-for-javascript/" target="_blank"
@@ -1506,6 +1539,11 @@
           </p>
 
           <h3 id="section-8-6">8.6 Executing the Test Suite: A Single Node</h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/execute_highlighted.png"
+            alt="execute highlighted"
+          />
           <h4 id="section-8-6-1">Requirements</h4>
           <p>
             As discussed earlier, parallelized execution of the user's entire
@@ -1530,6 +1568,12 @@
             </li>
           </ol>
           <h4 id="section-8-6-2">Implementation</h4>
+          <img
+            class="lazy"
+            data-src="images/diagrams/zoom_single_task.png"
+            alt="zoom single task"
+            width="350"
+          />
           <p>
             Conifer uses a simple shell script to control the flow of the test
             execution process within each node. This shell script is triggered
@@ -1557,12 +1601,6 @@
               were specified for the node.
             </li>
           </ol>
-          <img
-            class="lazy"
-            data-src="images/diagrams/single_task.png"
-            alt="single task"
-            height="150"
-          />
           <p>
             Running this script will execute a subset of the complete test suite
             on a single node. This script is executed in each node, which
@@ -1577,6 +1615,11 @@
             tests.
           </p>
           <h3 id="section-8-7">8.7 Persisting Test Results</h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/persist_highlighted.png"
+            alt="persist highlighted"
+          />
           <h4 id="section-8-7-1">Requirements</h4>
           <p>
             After a test is executed, we need to store its results in some form
@@ -1588,9 +1631,8 @@
             class="lazy"
             data-src="images/diagrams/persist_test_result.png"
             alt="persist test results"
-            height="300"
+            height="200"
           />
-
           <p>
             The process of persisting the test results can be broken down into
             two main steps:
@@ -1603,6 +1645,11 @@
             </li>
           </ol>
           <h4 id="section-8-7-2">Implementation</h4>
+          <img
+            class="lazy"
+            data-src="images/diagrams/persist_results.png"
+            alt="persist results"
+          />
           <p>
             Cypress can be configured to generate certain “test artifacts” upon
             the completion of a single test file. Cypress stores various
@@ -1637,6 +1684,11 @@
             the end-user.
           </p>
           <h3 id="section-8-8">8.8 Communicating Test Results to the User</h3>
+          <img
+            class="lazy"
+            data-src="images/diagrams/communicate_highlighted.png"
+            alt="communicate highlighted"
+          />
           <p>
             Let's discuss how we might communicate the test results back to the
             end-user.
@@ -1659,9 +1711,14 @@
           <h4 id="section-8-8-2">Implementation</h4>
           <img
             class="lazy"
+            data-src="images/diagrams/communicate_results.png"
+            alt="communicate results"
+          />
+          <!-- <img
+            class="lazy"
             data-src="images/diagrams/test_result_reports.png"
             alt="test result reports"
-          />
+          /> -->
           <p>
             Our goal was to give the user a high-level view of the results of
             the test-run in real-time, as well as a detailed report following
@@ -1695,7 +1752,7 @@
             class="lazy"
             data-src="images/diagrams/live_dashboard.gif"
             alt="live dashboard"
-            height="500"
+            height="400"
           />
           <p>
             The live dashboard enables real-time monitoring of the progression
@@ -1718,7 +1775,7 @@
             class="lazy"
             data-src="images/diagrams/save_results_locally.png"
             alt="html report"
-            height="250"
+            height="200"
           />
           <p>
             The report generation process is initiated when the CLI detects that
@@ -2004,6 +2061,12 @@
             alt="post execution aggregate"
           />
           <h4 id="section-9-2-1">Real-Time Results</h4>
+          <img
+            class="lazy"
+            data-src="images/diagrams/real_time_upload.gif"
+            alt="real-time upload"
+            height="300"
+          />
           <p>
             But this is not good enough. We want Conifer to be able to
             communicate the test results to the user in real-time, which is
